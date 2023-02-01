@@ -53,6 +53,7 @@ class TwoDigitCrawler
     private function runBrowsershot(): string
     {
         return Browsershot::url('https://www.set.or.th/th/market/product/stock/overview')
+            ->noSandbox()
             ->bodyHtml();
     }
 
