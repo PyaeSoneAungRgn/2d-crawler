@@ -15,9 +15,9 @@
     ],
     "require": {
         "php": "^8.0",
-        "spatie/browsershot": "^3.57",
-        "symfony/css-selector": "^6.2",
-        "symfony/dom-crawler": "^6.2"
+        "spatie/browsershot": "^3.0",
+        "symfony/css-selector": "^5.0|^6.0",
+        "symfony/dom-crawler": "^5.0|^6.0"
     },
     "require-dev": {
         "pestphp/pest": "^1.20",
