@@ -19,10 +19,16 @@ composer require pyaesoneaung/2d-crawler
 ```php
 use PyaeSoneAung\TwoDigitCrawler\TwoDigitCrawler;
 
-$twoDigit = new TwoDigitCrawler();
+$twoDigit = new TwoDigitCrawler;
 
 $twoDigit->getSet(); // return "1,685.75"
 $twoDigit->getVal(); // return "63,797.02"
 $twoDigit->getNumber(); // return "57"
 $twoDigit->getStatus(); // return "Closed"
+```
+
+## Testing
+
+```bash
+composer test
 ```
