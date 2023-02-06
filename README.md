@@ -6,7 +6,11 @@
 
 ## Requirements
 
-- [Puppeteer](https://github.com/puppeteer/puppeteer)
+[Puppeteer](https://github.com/puppeteer/puppeteer)
+
+```bash
+npm install puppeteer --location=global
+```
 
 ## Installation
 
