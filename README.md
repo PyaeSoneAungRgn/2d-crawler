@@ -25,10 +25,10 @@ use PyaeSoneAung\TwoDigitCrawler\TwoDigitCrawler;
 
 $twoDigit = new TwoDigitCrawler;
 
-$twoDigit->getSet(); // return "1,685.75"
-$twoDigit->getVal(); // return "63,797.02"
-$twoDigit->getNumber(); // return "57"
-$twoDigit->getStatus(); // return "Closed"
+$twoDigit->getSet(); // "1,685.75"
+$twoDigit->getVal(); // "63,797.02"
+$twoDigit->getNumber(); // "57"
+$twoDigit->getStatus(); // "Closed"
 ```
 
 ## Testing
