@@ -54,6 +54,7 @@ class TwoDigitCrawler
     {
         return Browsershot::url('https://www.set.or.th/th/market/product/stock/overview')
             ->noSandbox()
+            ->waitUntilNetworkIdle()
             ->bodyHtml();
     }
 
