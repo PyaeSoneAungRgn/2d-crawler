@@ -66,7 +66,7 @@ class TwoDigitCrawler
     private function filterValues(DomCrawler $dom): array
     {
         $set = $dom->filter('tr.table-active td')->eq(1)->text();
-        $val = $dom->filter('tr.table-active td')->eq(4)->text();
+        $val = $dom->filter('tr.table-active td')->eq(7)->text();
         $status = $dom->filter('div > small.text-end')->text();
         $status = trim(substr($status, strpos($status, ':') + 1));
 
