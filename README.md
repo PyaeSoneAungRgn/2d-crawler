@@ -4,18 +4,6 @@
 
 2D crawler for [set.or.th](https://www.set.or.th/th/market/product/stock/overview)
 
-## Requirements
-
-For Linux OS
-```bash
-apt install libnss3-dev libatk1.0-0 libatk-bridge2.0-0 libcups2 libgbm1 libpangocairo-1.0-0 libgtk-3-0
-```
-
-NPM Package
-```bash
-npm install puppeteer --location=global
-```
-
 ## Installation
 
 ```bash

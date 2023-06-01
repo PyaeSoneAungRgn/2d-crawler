@@ -2,8 +2,7 @@
 
 namespace PyaeSoneAung\TwoDigitCrawler;
 
-use Spatie\Browsershot\Browsershot;
-use Symfony\Component\DomCrawler\Crawler as DomCrawler;
+use Symfony\Component\BrowserKit\HttpBrowser;
 
 class TwoDigitCrawler
 {
@@ -44,29 +43,22 @@ class TwoDigitCrawler
 
     private function getValuesFromSite(): array
     {
-        $html = $this->runBrowsershot();
-        $dom = $this->convertHtmlToDom($html);
+        $client = new HttpBrowser();
+        $dom = $client->request('GET', 'https://www.set.or.th/th/market/product/stock/overview');
 
         return $this->filterValues($dom);
     }
 
-    private function runBrowsershot(): string
+    private function filterValues($dom): array
     {
-        return Browsershot::url('https://www.set.or.th/th/market/product/stock/overview')
-            ->noSandbox()
-            ->waitUntilNetworkIdle()
-            ->bodyHtml();
-    }
-
-    private function convertHtmlToDom(string $html): DomCrawler
-    {
-        return new DomCrawler($html);
-    }
-
-    private function filterValues(DomCrawler $dom): array
-    {
-        $set = $dom->filter('tr.table-active td')->eq(1)->text();
-        $val = $dom->filter('tr.table-active td')->eq(7)->text();
+        $cols = $dom->filter('div.table-index-overview')
+            ->filter('table')
+            ->eq(1)
+            ->filter('tr')
+            ->eq(1)
+            ->filter('td');
+        $set = $cols->eq(1)->text();
+        $val = $cols->eq(7)->text();
         $status = $dom->filter('div > small.text-end')->text();
         $status = trim(substr($status, strpos($status, ':') + 1));
 

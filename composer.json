@@ -15,9 +15,9 @@
     ],
     "require": {
         "php": "^8.0",
-        "spatie/browsershot": "^3.0",
+        "symfony/browser-kit": "^5.0|^6.0",
         "symfony/css-selector": "^5.0|^6.0",
-        "symfony/dom-crawler": "^5.0|^6.0"
+        "symfony/http-client": "^5.0|^6.0"
     },
     "require-dev": {
         "pestphp/pest": "^1.20",
