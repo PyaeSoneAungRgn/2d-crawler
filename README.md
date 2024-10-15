@@ -7,11 +7,15 @@
 ## Requirements
 
 For Linux OS
+
 ```bash
-apt install libnss3-dev libatk1.0-0 libatk-bridge2.0-0 libcups2 libgbm1 libpangocairo-1.0-0 libgtk-3-0 libasound2t64
+apt install libnss3-dev libatk1.0-0 libatk-bridge2.0-0 libcups2 libgbm1 libpangocairo-1.0-0 libgtk-3-0
+
+# apt install libasound2t64 (only if you face error)
 ```
 
 NPM Package
+
 ```bash
 npm install puppeteer --location=global
 ```
